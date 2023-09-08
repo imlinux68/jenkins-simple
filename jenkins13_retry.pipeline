@@ -1,0 +1,13 @@
+pipeline{
+    agent any
+    options{
+        retry(3)
+    }
+    stages{
+        stage("opts"){
+            steps{
+                sh "/var/jenkins_home/workspace/user5/helloworld.java"
+            }
+        }
+    }
+}
