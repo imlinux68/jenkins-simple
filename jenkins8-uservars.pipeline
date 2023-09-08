@@ -1,0 +1,19 @@
+pipeline{
+    agent any
+    environment{
+        ToolName="JenkinsTool"
+    }
+    stages{
+        stage("user variable"){
+            environment{
+                ToolName="Docker"
+            }
+            steps{
+				script{
+				ToolName="Ansible"
+				}
+                echo "Tool name is: $ToolName and ${env.ToolName}"
+            }
+        }
+    }
+}
