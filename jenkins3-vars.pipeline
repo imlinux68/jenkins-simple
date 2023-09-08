@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("printanv"){
+            steps{
+                echo "Currnet build number: $BUILD_NUMBER"
+            }
+        }
+    }
+}
