@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    environment{
+        BUILD_NUMBER="Jenkins"
+    }
+    stages{
+        stage("user variable"){
+            steps{
+				script{
+				ToolName="Ansible"
+				}
+                echo 'Build number is: $BUILD_NUMBER'
+            }
+        }
+    }
+}
