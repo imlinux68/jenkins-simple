@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages{
+        stage("Trigger"){
+            steps{
+                build(job:'job1', propagate: false)
+                build('job2')
+            }
+        }
+    }
+}
